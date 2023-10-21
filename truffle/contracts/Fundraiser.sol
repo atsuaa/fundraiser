@@ -91,4 +91,9 @@ contract Fundraiser is Ownable {
         totalDonations = totalDonations.add(msg.value);
         donationsCount++;
     }
+
+    receive() external payable {
+        totalDonations = totalDonations.add(msg.value);
+        donationsCount++;
+    }
 }

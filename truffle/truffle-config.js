@@ -46,6 +46,8 @@
 
 // const HDWalletProvider = require('@truffle/hdwallet-provider');
 
+const path = require("path");
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -57,7 +59,7 @@ module.exports = {
    * $ truffle test --network <network-name>
    */
 
-  contracts_build_directory: "../client/src/contracts",
+  contracts_build_directory: path.join(__dirname, "../client/src/contracts"),
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
